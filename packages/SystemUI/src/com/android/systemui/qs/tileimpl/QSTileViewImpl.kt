@@ -109,7 +109,7 @@ open class QSTileViewImpl @JvmOverloads constructor(
     private val tintAlpha: Boolean = qsPanelStyle == 1 || qsPanelStyle == 2 || qsPanelStyle == 10
 
     private val colorActive = Utils.getColorAttrDefaultColor(context,
-            com.android.internal.R.attr.colorAccentPrimary)
+            android.R.attr.colorAccent)
     private val colorOffstate = Utils.getColorAttrDefaultColor(context, R.attr.offStateColor)
     private val offStateAlpha = ContextCompat.getColorStateList(context, R.drawable.color_alpha_offstate)?.defaultColor ?: colorOffstate
     private val colorInactive = if (tintAlpha) offStateAlpha else Utils.getColorAttrDefaultColor(context, R.attr.offStateColor)
