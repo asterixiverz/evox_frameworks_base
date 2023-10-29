@@ -143,7 +143,8 @@ public class QSCarrier extends LinearLayout {
                         com.android.settingslib.R.string.not_default_data_content_description));
     }
 
-    public void updateColors(ColorStateList colorStateList) {
+     public void updateColors(int color, ColorStateList colorStateList) {
+        mCarrierText.setTextColor(color);
         final boolean visible = !mIsSingleCarrier;
         if (visible) {
             mMobileRoaming.setImageTintList(colorStateList);
@@ -161,7 +162,7 @@ public class QSCarrier extends LinearLayout {
     }
 
     public void updateTextAppearance(@StyleRes int resId) {
-        FontSizeUtils.updateFontSizeFromStyle(mCarrierText, resId);
+        mCarrierText.setTextAppearance(resId);
     }
 
     @Override
